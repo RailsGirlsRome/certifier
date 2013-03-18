@@ -10,15 +10,8 @@ class CertificatesController < ApplicationController
     end
   end
 
-  # GET /certificates/new
-  # GET /certificates/new.json
   def new
     @certificate = Certificate.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @certificate }
-    end
   end
 
   # POST /certificates
