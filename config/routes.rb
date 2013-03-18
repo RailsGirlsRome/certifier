@@ -1,4 +1,7 @@
 Certifier::Application.routes.draw do
+  resources :certificates
+
+
   root to: 'welcome#index'
 
   # The priority is based upon order of creation:
