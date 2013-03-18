@@ -1,12 +1,10 @@
 class CertificatesController < ApplicationController
-  # GET /certificates/1
-  # GET /certificates/1.json
   def show
     @certificate = Certificate.find(params[:id])
-
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @certificate }
+      format.html do
+        @certificate_html = certificate_html
+      end
     end
   end
 
@@ -21,5 +19,12 @@ class CertificatesController < ApplicationController
     else
       render action: 'new'
     end
+  end
+
+  private
+
+  def certificate_html
+    template = ERB.new File.read(Rails.root.join('app/views/certificates/example.html.erb'))
+    template.result(binding)
   end
 end

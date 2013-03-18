@@ -1,13 +1,1 @@
-<p>
-  <b>Name:</b>
-  <%= @certificate.name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @certificate.email %>
-</p>
-
-
-<%= link_to 'Edit', edit_certificate_path(@certificate) %> |
-<%= link_to 'Back', certificates_path %>
+<%= @certificate_html.html_safe %>
