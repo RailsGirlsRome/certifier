@@ -5,6 +5,11 @@ class CertificatesController < ApplicationController
       format.html do
         @certificate_html = certificate_html
       end
+      format.pdf do
+        kit = PDFKit.new(certificate_html)
+        filename = "#{@certificate.name.parameterize}.pdf"
+        send_data kit.to_pdf, :filename => filename, :content_type => 'application/pdf'
+      end
     end
   end
 

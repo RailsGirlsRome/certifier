@@ -1,1 +1,3 @@
 <%= @certificate_html.html_safe %>
+
+<%= link_to 'get pdf', certificate_path(@certificate, :format => :pdf), :method => :get, :class => 'btn btn-success' %>
