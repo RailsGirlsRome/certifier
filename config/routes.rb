@@ -1,5 +1,5 @@
 Certifier::Application.routes.draw do
-  resources :certificates
+  resources :certificates, :only => [:new, :show, :create]
 
 
   root to: 'welcome#index'
