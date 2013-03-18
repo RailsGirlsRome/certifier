@@ -14,19 +14,12 @@ class CertificatesController < ApplicationController
     @certificate = Certificate.new
   end
 
-  # POST /certificates
-  # POST /certificates.json
   def create
     @certificate = Certificate.new(params[:certificate])
-
-    respond_to do |format|
-      if @certificate.save
-        format.html { redirect_to @certificate, notice: 'Certificate was successfully created.' }
-        format.json { render json: @certificate, status: :created, location: @certificate }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @certificate.errors, status: :unprocessable_entity }
-      end
+    if @certificate.save
+      redirect_to @certificate, notice: 'Certificate was successfully created.'
+    else
+      render action: 'new'
     end
   end
 end
