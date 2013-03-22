@@ -38,20 +38,20 @@ Work in progress below...
   * require twitter bootstrap javascripts
   * change application layout to use twitter bootstrap html structure
 
-== Add Welcome page
+== Add Welcome page (step 1)
 
   * generate welcome controller with index action: `rails g controller welcome index`
   * use welcome#index as homepage
   * update homepage text contents
 
-== Add Certificate pages
+== Add Certificate pages (step 2)
 
   * generate certificate scaffold: `rails g scaffold certificate name email`
   * remove unused certificate resource routes, actions, views
   * add certificate model validations
   * update certificate controller and views code
 
-== Add PDF representation of Certificate
+== Add PDF representation of Certificate (step 3)
 
   * add erb version of the example.html template
   * add controller code to handle pdf representation of certificate
