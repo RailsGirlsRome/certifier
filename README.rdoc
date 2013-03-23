@@ -55,6 +55,19 @@ Work in progress below...
 
   * add erb version of the example.html template
   * add controller code to handle pdf representation of certificate
+```ruby
+  # ...
+  format.pdf do
+    kit = PDFKit.new(certificate_html)
+    filename = "#{@certificate.name.parameterize}.pdf"
+    send_data kit.to_pdf, :filename => filename, :content_type => 'application/pdf'
+  end
+
+  def certificate_html
+    template = ERB.new File.read(Rails.root.join('app/views/certificates/example.html.erb'))
+    template.result(binding)
+  end
+```
 
 == Improve Styles
 
