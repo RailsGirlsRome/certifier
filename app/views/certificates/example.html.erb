@@ -1,13 +1,13 @@
-<html>
-<head>
-  <title>Rails Girls Rome 2013 Participation Certificate</title>
   <style type="text/css">
+  .ctnr {
+    font-family: sans-serif;
+  }
   #certificate {
     font-family: sans-serif;
     border: 4px solid #cc3300;
     overflow: auto;
     width: 500px;
-    margin: auto;
+    margin: 25px auto;
   }
   #certificate #logo {
     float: left;
@@ -26,23 +26,25 @@
     margin-bottom: 15px;
   }
   </style>
-</head>
-<body>
-  <div id="certificate">
-      <img id="logo" src="https://secure.gravatar.com/avatar/ae1295e0d53f3b81def634344b6644c1?s=170">
-    <div id="info">
-    <h1>Rails Girls Rome 2013</h1>
-      <table cellpadding="5">
-        <tr>
-          <th>Name:</th>
-          <td><%= @certificate.name %></td>
-        </tr>
-        <tr>
-          <th>Email:</th>
-          <td><%= @certificate.email %></td>
-        </tr>
-      </table>
+
+  <div class="ctnr">
+    <div id="certificate">
+        <img id="logo" src="https://secure.gravatar.com/avatar/ae1295e0d53f3b81def634344b6644c1?s=170">
+      <div id="info">
+        <h1>Rails Girls Rome 2013</h1>
+        <table cellpadding="5">
+          <tr>
+            <th>Name:</th>
+            <td><%= @certificate.name %></td>
+          </tr>
+          <tr>
+            <th>Email:</th>
+            <td><%= @certificate.email %></td>
+          </tr>
+        </table>
+      </div>
     </div>
+    <h4 style="text-align:center">
+      L'alunna <%= @certificate.name %> ha partecipato all'evento Rails Girls Rome tenutosi il giorno 23 marzo 2013
+    </h4>
   </div>
-</body>
-</html>
