@@ -5,6 +5,10 @@ gem 'jquery-rails'
 gem 'pdfkit'
 gem 'wkhtmltopdf-binary'
 
+gem 'pry-rails'
+gem 'awesome_print'
+gem 'hirb'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
